@@ -46,7 +46,8 @@ Our submission placed **first** in the BioCreative IX MedHopQA challenge with an
 
 - **EMNLP 2026 Main, accepted:** Meerkat2 and Adaptive Latent Block Insertion. Second author on both papers.
 - **Database, accepted:** MedHopQA journal extension. Co-first author.
-- **IJCAI 2025 BioCreative IX and ACL 2025 BioNLP Workshops:** MedHopQA and ArchEHR-QA. Co-first author on both papers.
+- **IJCAI 2025 BioCreative IX Workshop:** MedHopQA. Co-first author.
+- **ACL 2025 BioNLP Workshop:** ArchEHR-QA. Co-first author.
 
 [Full titles, contributions, and public links](PUBLICATIONS.md)
 
