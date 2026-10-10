@@ -10,7 +10,7 @@ This project uses research papers and tool execution traces to train agents that
 
 The agents needed examples of how to turn a research question into an analysis plan and execute it with tools.
 
-I started from the analysis procedures in research papers and worked backward to synthesize questions and plans. Filtering these examples produced approximately **36,000** planning examples.
+I started from the analysis procedures in research papers and worked backward to synthesize questions and plans, then filtered the examples for training.
 
 I collected tool execution traces from Kimi K2.6 and used them to fine-tune a Qwen3.6-27B executor with supervised fine-tuning (SFT). I evaluated the executor and analyzed failures on benchmarks including BiomniBench and BixBench.
 
@@ -24,7 +24,7 @@ Checking whether a generated plan and trace agreed with each other was insuffici
 | A final answer can hide missing tool executions | Review tool calls and execution outputs together |
 | A valid alternative method can differ from the reference plan | Manually review alternative methods before excluding them |
 
-These checks helped me select **6,876** traces for further training.
+These checks helped me select execution traces for further training.
 
 ## Current work
 

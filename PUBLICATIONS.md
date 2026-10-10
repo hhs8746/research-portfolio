@@ -58,4 +58,4 @@ In follow-up experiments, I worked on rubric-based SFT, reinforcement learning, 
 
 **FineWeb-Reasoning:** Checked reasoning-quality scoring prompts and document samples across score ranges, designed GRPO rewards, and trained a base model. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
 
-**AI-CoScientist:** Synthesized approximately 36,000 planning examples from research papers, validated and selected 6,876 execution traces, and fine-tuned and evaluated an executor model. Self-distillation and reinforcement learning are being considered for the next stage. [Project notes](projects/ai-coscientist.md)
+**AI-CoScientist:** Synthesized planning examples from research papers, validated and selected execution traces, and fine-tuned and evaluated an executor model. Self-distillation and reinforcement learning are being considered for the next stage. [Project notes](projects/ai-coscientist.md)

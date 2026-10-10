@@ -22,7 +22,7 @@ On the same benchmark, single-hop Recall@10 and multi-hop Coverage@10 each impro
 
 I build and validate training data for scientific analysis agents and train the executor model.
 
-I synthesized approximately **36,000** planning examples from research papers, collected teacher execution traces, and fine-tuned a Qwen3.6-27B executor. Comparing the traces with the papers' analysis plans and the executed code helped me select **6,876** traces for further training.
+I synthesized planning examples from research papers, collected teacher execution traces, and fine-tuned a Qwen3.6-27B executor. I validated and selected traces for further training by comparing them with the papers' analysis plans and the executed code.
 
 The project is ongoing. Self-distillation and reinforcement learning are under consideration for the next stage.
 
@@ -50,12 +50,3 @@ Our submission placed **first** in the BioCreative IX MedHopQA challenge with an
 - **ACL 2025 BioNLP Workshop:** ArchEHR-QA. Co-first author.
 
 [Full titles, contributions, and public links](PUBLICATIONS.md)
-
-## Background
-
-- **Korea University:** M.S. student in Computer Science, Applied Artificial Intelligence, DMIS Lab. March 2025 to February 2027 (expected).
-- **University of Seoul:** Bachelor's degree in Statistics with a double major in Economics. February 2025. Graduated top of the Statistics department.
-
-I use Python, SQL, PostgreSQL, pgvector, Elasticsearch, BM25, FAISS, FastAPI, and Docker. For model training, I use PyTorch, Hugging Face, DeepSpeed ZeRO-3, SFT, DPO, and GRPO.
-
-Awards and certifications include a Samsung Securities program grand prize, Kaggle Expert status, a silver medal for Parkinson's disease prediction, a bronze medal for Vesuvius ink detection, SQLD, and ADsP.
