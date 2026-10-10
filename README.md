@@ -32,13 +32,15 @@ The project is ongoing. Self-distillation and reinforcement learning are under c
 
 MedHopQA is a biomedical question-answering task in which an answer requires combining evidence from multiple documents.
 
-I implemented and compared three search approaches that generate answer candidates, then analyzed how the final decision model selects among them. Our submission placed **first** in the BioCreative IX challenge with an official test exact match (EM) score of **0.84**. The journal extension reached **0.87** in post-challenge experiments with an updated model configuration. I am a co-first author of both papers.
+I built and compared three retrieval methods for the challenge system. Our submission placed **first** in BioCreative IX with an official test exact match (EM) score of **0.84**.
 
-[Portfolio pages](projects/medhopqa.md) · [Workshop proceedings](https://zenodo.org/records/16875348)
+The journal extension examines how retrieval, answer generation, and final answer selection affect accuracy. I compared model combinations, diagnosed the decision model's bias toward its own answers, and tested separate generation and decision models. The updated configuration reached **EM 0.87** in post-challenge experiments. I am a co-first author of both papers.
+
+[Challenge portfolio page](projects/medhopqa.md) · [Journal portfolio page](projects/medhopqa-journal.md) · [Workshop proceedings](https://zenodo.org/records/16875348)
 
 ## Other research
 
-- **Meerkat2 and follow-up training:** Meerkat2 is a Korean-English medical reasoning model with knowledge of Korean medical laws. I validated legal QA and evaluated models on clinical benchmarks. In follow-up work, I selected SFT data and improved rubric-based reinforcement learning. HealthBench scores increased from 44.9 to 51.2 (14B) and from 46.3 to 55.3 (32B) relative to the Qwen3 baselines. [Portfolio pages](projects/meerkat2.md)
+- **Meerkat2 and follow-up training:** Meerkat2 is a Korean-English medical reasoning model with knowledge of Korean medical laws. I validated legal QA and evaluated models on clinical benchmarks. In follow-up work, I selected SFT data and improved rubric-based reinforcement learning. HealthBench scores increased from 44.9 to 51.2 (14B) and from 46.3 to 55.3 (32B) compared with Meerkat2 before further training. [Portfolio pages](projects/meerkat2.md)
 - **FineWeb-Reasoning:** This project studies how reasoning-rich web documents can improve language-model training. I reviewed the prompts and document samples used to score reasoning quality, then designed rewards against shortcuts and trained the pretrained base model with GRPO without an initial SFT stage. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA. [Portfolio pages](projects/fineweb-reasoning.md)
 - **ArchEHR-QA:** This task asks systems to answer patient questions using evidence from electronic health records. I designed and tested a multi-agent pipeline that selects relevant sentences, asks specialist agents to review them, and combines the evidence into an answer. Our system ranked first on the public leaderboard; the paper appeared at the ACL 2025 BioNLP Workshop. [Portfolio pages](projects/archehr-qa.md)
 - **Adaptive Latent Block Insertion:** This research aims to improve an LLM's reasoning during answer generation without retraining the model. I ran experiments with an existing latent-reasoning method (LTPO) and trained SoftCoT projection modules, comparing these baselines with the proposed method on five benchmarks. The paper was accepted at EMNLP 2026 Main; I am the second author. [Portfolio pages](projects/adaptive-latent-block.md)

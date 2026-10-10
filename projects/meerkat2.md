@@ -6,7 +6,7 @@ Meerkat2 is a Korean-English medical reasoning model with knowledge of Korean me
 
 [Publication listing](https://dmis.korea.ac.kr/publications)
 
-The second page covers follow-up research. Its HealthBench improvements are measured against the Qwen3 baselines, separately from the original paper's HealthBench Hard evaluation.
+The second page covers follow-up training. Its HealthBench results compare Meerkat2 before and after further training; the original paper reports HealthBench Hard separately.
 
 ### Original Meerkat2 research and my contribution
 

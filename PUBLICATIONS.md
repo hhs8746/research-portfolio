@@ -14,7 +14,7 @@ Meerkat2 is a Korean-English medical reasoning model designed to combine clinica
 
 **My contribution:** I validated synthetic medical-law QA against source texts using LF-Eval and manual review, and evaluated the models on three clinical benchmarks, including HealthBench Hard.
 
-In follow-up research, I selected SFT data, improved rubric-based reinforcement-learning rewards, and evaluated the models. I changed scoring to evaluate individual rubric items and strengthened judge-output parsing to stabilize training. Relative to the Qwen3 baselines, HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These results are separate from the original paper.
+In follow-up research, I selected SFT data, improved rubric-based reinforcement-learning rewards, and evaluated the models. I changed scoring to evaluate individual rubric items and strengthened judge-output parsing to stabilize training. Compared with Meerkat2 before further training, HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These results are separate from the original paper.
 
 [Portfolio pages](projects/meerkat2.md) · [Publication listing](https://dmis.korea.ac.kr/publications)
 
@@ -38,7 +38,7 @@ This paper extends MedHopQA, a task that answers biomedical questions by combini
 
 **My contribution:** I compared the components and model combinations, identified the decision model's preference for answers it had generated itself, and evaluated separate generation and decision models. This configuration reached EM 0.87 in post-challenge experiments with an updated model configuration, reported separately from the official challenge result.
 
-[Journal article](https://doi.org/10.1093/database/baag061) · [Portfolio pages](projects/medhopqa.md)
+[Journal article](https://doi.org/10.1093/database/baag061) · [Portfolio page](projects/medhopqa-journal.md)
 
 ## Workshop papers
 

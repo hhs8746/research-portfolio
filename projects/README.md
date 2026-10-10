@@ -1,12 +1,13 @@
 # Project Portfolio Pages
 
-These pages show the project context, my contributions, and results from the Korean portfolio.
+These pages show the project context, my contributions, and results from the Korean portfolio. Each page displays the relevant portfolio images and links to a separate PDF.
 
 [Back to portfolio](../README.md)
 
 | Project | Portfolio pages |
 | --- | --- |
-| [MedHopQA](medhopqa.md) | 8–9 |
+| [MedHopQA Challenge](medhopqa.md) | 8 |
+| [MedHopQA Journal Extension](medhopqa-journal.md) | 9 |
 | [Visual Document Graph RAG](visual-document-rag.md) | 10–11 |
 | [Meerkat2 and Follow-up Training](meerkat2.md) | 12–13 |
 | [ArchEHR-QA](archehr-qa.md) | 14 |

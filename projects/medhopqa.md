@@ -1,17 +1,13 @@
-# MedHopQA
+# MedHopQA Challenge
 
-MedHopQA answers biomedical questions by combining evidence from multiple documents. I built and compared three retrieval paths, then analyzed answer-selection bias in the journal extension.
+MedHopQA answers biomedical questions by combining evidence from multiple documents. I built and compared three retrieval methods for the challenge system, which placed first in BioCreative IX with an official test EM of 0.84.
 
 [Back to portfolio](../README.md) · [Project PDF (Korean)](../assets/projects/medhopqa.pdf)
 
-[Journal article](https://doi.org/10.1093/database/baag061) · [Workshop proceedings](https://zenodo.org/records/16875348)
+[Workshop proceedings](https://zenodo.org/records/16875348) · [Journal extension](medhopqa-journal.md)
 
-The official challenge result is EM 0.84. EM 0.87 is the post-challenge result with an updated model configuration. The routing experiment on the second page was exploratory; full validation remains pending.
+The official challenge test EM is 0.84; the 0.87 shown for this configuration is a development-set result.
 
 ### Challenge system and my retrieval contributions
 
 ![Challenge system and my retrieval contributions — Korean portfolio page 8](../assets/pages/portfolio-08.png)
-
-### Journal extension: component analysis and decision-model bias
-
-![Journal extension: component analysis and decision-model bias — Korean portfolio page 9](../assets/pages/portfolio-09.png)
