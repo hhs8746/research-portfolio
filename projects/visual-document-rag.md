@@ -1,48 +1,13 @@
 # Visual Document Graph RAG
 
-This project builds a search-and-answer system for company slides and dashboards. It targets questions whose supporting evidence is spread across several visual documents, and was developed in a research collaboration with LG Electronics.
+This LG Electronics research collaboration retrieves evidence across company slides and dashboards. I designed and implemented the document database, Graph RAG system, benchmark, and evaluation server.
 
-**My role:** I designed and implemented the document database, graph-based retrieval pipeline, retrieval and answer server, benchmark, and evaluation server.
+[Back to portfolio](../README.md) · [Project PDF (Korean)](../assets/projects/visual-document-rag.pdf)
 
-[Back to portfolio](../README.md) · [Portfolio PDF (Korean)](../portfolio.pdf)
+### Project problem, my role, and retrieval architecture
 
-## Retrieval pipeline
+![Project problem, my role, and retrieval architecture — Korean portfolio page 10](../assets/pages/portfolio-10.png)
 
-The existing system could search visual documents, but there was no common benchmark for comparing changes. Questions requiring evidence from several slides also needed more than vector retrieval alone.
+### Benchmark design and evaluation results
 
-I used a vision-language model to extract entities, relationships, and descriptions from each slide, then normalized their representations. PostgreSQL stores document metadata, content, entities, and relationships. pgvector supports vector search.
-
-```mermaid
-flowchart TD
-    A["Slides and dashboards"] --> B["VLM extraction and normalization"]
-    B --> C["PostgreSQL and pgvector"]
-    C --> D["Description and lexical indexes"]
-    C --> E["Entity-group and fact indexes"]
-    D --> F["RRF and graph expansion"]
-    E --> F
-    F --> G["FastAPI retrieval and answer server"]
-    A --> H["QA generation and evidence checks"]
-    G --> I["Evaluation server and leaderboard"]
-    H --> I
-```
-
-Four indexes cover descriptions, lexical terms, entity groups, and factual sentences. Reciprocal rank fusion combines their rankings. The system then follows entity relationships from the retrieved slides to find evidence in other documents.
-
-## Benchmark and evaluation
-
-- Generated single-hop and multi-hop questions with a vision-language model, using five question-writing rules and multiple evidence checks.
-- Verified that multi-hop questions required evidence from several slides.
-- Evaluated retrieval with Recall@K, NDCG@K, and Coverage@K. Scored answers with an LLM judge on five criteria, including correctness and completeness.
-- Defined common request and response formats and added adapters so different RAG systems could use the same evaluation server.
-- Included database extensions and initialization settings in Docker images to reproduce the environment.
-
-## Results
-
-| Metric | Baseline | Improvement |
-| --- | --- | --- |
-| Single-hop Recall@10 | Existing internal system | More than 20 percentage points |
-| Multi-hop Coverage@10 | Existing internal system | More than 20 percentage points |
-
-Both systems were evaluated on the same benchmark. The improvements are absolute percentage-point differences.
-
-**Tools:** Python, VLMs, PostgreSQL, pgvector, Graph RAG, RRF, FastAPI, Docker.
+![Benchmark design and evaluation results — Korean portfolio page 11](../assets/pages/portfolio-11.png)
