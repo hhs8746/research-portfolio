@@ -1,8 +1,8 @@
 # MedHopQA
 
-MedHopQA requires answering biomedical questions by combining evidence from multiple documents. Our system uses three retrieval methods to generate candidate answers, then a decision model selects or derives the final answer.
+MedHopQA is a biomedical question-answering task that requires combining evidence from multiple documents to reach an answer. Our system generates candidates through three search methods, then a separate decision model selects or derives the final answer.
 
-**My role:** Implementation and comparison of the three retrieval methods, analysis of decision-model bias in the journal extension. Co-first author of both papers.
+**My role:** I implemented and compared the three search methods and analyzed answer-selection bias in the journal extension. I am a co-first author of both papers.
 
 [Back to portfolio](../README.md) · [Portfolio PDF (Korean)](../portfolio.pdf)
 

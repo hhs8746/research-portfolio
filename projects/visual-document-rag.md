@@ -1,8 +1,8 @@
 # Visual Document Graph RAG
 
-I built a retrieval system that converts slides and dashboards into searchable data, along with a benchmark and evaluation server. This work was part of a research collaboration with LG Electronics.
+This project builds a search-and-answer system for company slides and dashboards. It targets questions whose supporting evidence is spread across several visual documents, and was developed in a research collaboration with LG Electronics.
 
-**My role:** Research and implementation of the benchmark, database, Graph RAG pipeline, retrieval and answer server, and evaluation server.
+**My role:** I designed and implemented the document database, graph-based retrieval pipeline, retrieval and answer server, benchmark, and evaluation server.
 
 [Back to portfolio](../README.md) · [Portfolio PDF (Korean)](../portfolio.pdf)
 

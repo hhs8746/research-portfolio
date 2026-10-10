@@ -1,8 +1,8 @@
 # AI-CoScientist
 
-This project uses research papers and tool execution traces to train agents that plan and perform scientific data analysis.
+AI-CoScientist trains agents to turn scientific research questions into analysis plans and carry them out with tools and code. The training uses analysis procedures from research papers and demonstrations of tool execution.
 
-**My role:** Planning data synthesis and filtering, executor SFT, execution-trace validation, and benchmark evaluation.
+**My role:** I synthesized and filtered planning data, fine-tuned the model that executes analyses, validated the tool-execution records used for training, and evaluated it on scientific-analysis benchmarks.
 
 [Back to portfolio](../README.md) · [Portfolio PDF (Korean)](../portfolio.pdf)
 

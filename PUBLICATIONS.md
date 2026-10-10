@@ -1,6 +1,6 @@
 # Publications and Research Contributions
 
-This page lists my papers and the work I contributed to each project.
+This page introduces the research behind each paper and my contribution to it.
 
 [Back to portfolio](README.md) · [Portfolio PDF (Korean)](portfolio.pdf)
 
@@ -10,30 +10,27 @@ This page lists my papers and the work I contributed to each project.
 
 **EMNLP 2026 Main. Accepted. Second author.**
 
-The project combines medical reasoning distillation, QA synthesized from Korean medical-law source texts, and verbosity disentanglement.
+Meerkat2 is a Korean-English medical reasoning model designed to combine clinical reasoning with knowledge of Korean medical laws. Its training separates reasoning learned from teacher models from legal facts learned from source texts, while reducing the long answers inherited from teachers.
 
-- Validated synthetic QA against Korean medical law using LF-Eval and manual review.
-- Evaluated the models on three clinical benchmarks, including HealthBench.
+**My contribution:** I validated synthetic medical-law QA against source texts using LF-Eval and manual review, and evaluated the models on three clinical benchmarks, including HealthBench.
 
-In follow-up experiments, I worked on rubric-based SFT, reinforcement learning, reward design, and evaluation. I changed rubric scoring to evaluate individual items and strengthened judge-output parsing to stabilize rewards. HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These are follow-up results, separate from those in the original paper.
+In follow-up research, I selected SFT data, improved rubric-based reinforcement-learning rewards, and evaluated the models. I changed scoring to evaluate individual rubric items and strengthened judge-output parsing to stabilize training. Relative to the Qwen3 baselines, HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These results are separate from the original paper.
 
 ### Adaptive Latent Block Insertion via Online Reward Optimization
 
 **EMNLP 2026 Main. Accepted. Second author.**
 
-The method detects sustained uncertainty during generation, inserts a latent block, and optimizes its vectors using confidence from short rollouts, without retraining the main model.
+This paper studies how to improve an LLM's reasoning during answer generation without retraining the model. The method detects sustained uncertainty, inserts latent vectors, and optimizes them using confidence from short trial continuations.
 
-- Ran LTPO experiments and trained SoftCoT projection modules on Qwen3 and Ministral.
-- Compared the methods on five benchmarks under the same experimental conditions.
-- Contributed to research on training-free optimization during inference.
+**My contribution:** I ran LTPO experiments and trained SoftCoT projection modules on Qwen3 and Ministral. I compared these existing latent-reasoning approaches with the proposed method on five benchmarks under the same experimental conditions.
 
 ### Ensemble Multi-Retrieval Methodologies with Reasoning Model Decision in Multi-Step Biomedical QA
 
 **Database, Oxford University Press. Accepted. Co-first author.**
 
-- Compared retrieval, answer generation, and final answer selection in MedHopQA.
-- Analyzed the decision model's preference for its own generated answers.
-- Evaluated separate generation and decision models, reaching an EM score of 0.87 under our internal evaluation setup.
+This paper extends MedHopQA, a task that answers biomedical questions by combining evidence from multiple documents. It examines how retrieval, answer generation, and final answer selection each affect accuracy.
+
+**My contribution:** I compared the components and model combinations, identified the decision model's preference for answers it had generated itself, and evaluated separate generation and decision models. This configuration reached EM 0.87 under our internal evaluation setup, reported separately from the official challenge result.
 
 [Project notes](projects/medhopqa.md)
 
@@ -43,8 +40,9 @@ The method detects sustained uncertainty during generation, inserts a latent blo
 
 **IJCAI 2025 BioCreative IX Workshop. Co-first author.**
 
-- Implemented and compared Query2Doc, rationale-based retrieval, and web search.
-- Our submission placed first in the BioCreative IX MedHopQA challenge with an official test EM score of 0.84.
+This paper presents a system for biomedical questions that require evidence from several documents. It uses hypothetical-document search (Query2Doc), reasoning-based search, and web search to generate answer candidates, then a separate decision model selects or derives the final answer.
+
+**My contribution:** I implemented and compared the three retrieval methods. Our submission placed first in the BioCreative IX MedHopQA challenge with an official test EM score of 0.84.
 
 [Workshop paper list](https://www.ncbi.nlm.nih.gov/research/bionlp/biocreative9) · [Proceedings](https://zenodo.org/records/16875348) · [Project notes](projects/medhopqa.md)
 
@@ -52,14 +50,14 @@ The method detects sustained uncertainty during generation, inserts a latent blo
 
 **ACL 2025 BioNLP Workshop. Co-first author.**
 
-- Designed and tested a multi-agent framework with patient-context generation, initial EHR evidence selection, specialist review, and final answer synthesis.
-- Test scores: Factuality 58.6, Relevance 48.8, Overall 53.7.
-- Our system ranked first on the public leaderboard.
+This paper presents a system that answers patient questions using evidence from electronic health records. Its multi-agent framework creates patient context, selects relevant EHR sentences, has specialist agents review the evidence, and produces an answer with supporting record IDs.
+
+**My contribution:** I designed and tested the overall pipeline, including sentence-level evidence decisions and specialist review. Our system ranked first on the public leaderboard, with test scores of Factuality 58.6, Relevance 48.8, and Overall 53.7.
 
 [ACL Anthology](https://aclanthology.org/2025.bionlp-share.15/) · [Paper PDF](https://aclanthology.org/2025.bionlp-share.15.pdf)
 
 ## Additional research
 
-**FineWeb-Reasoning:** Checked reasoning-quality scoring prompts and document samples across score ranges, designed rewards to penalize reward hacking, and trained a base model with GRPO without an initial SFT stage. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
+**FineWeb-Reasoning:** This project studies whether selecting web documents with stronger reasoning can produce a stronger base language model. I checked reasoning-quality scoring prompts and document samples, then designed rewards against shortcuts and applied GRPO to the pretrained base model without an initial SFT stage. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
 
-**AI-CoScientist:** Synthesized planning examples from research papers, validated and selected execution traces, and fine-tuned and evaluated an executor model. Self-distillation and reinforcement learning are being considered for the next stage. [Project notes](projects/ai-coscientist.md)
+**AI-CoScientist:** This project trains agents to plan scientific analyses and execute them with tools and code. I synthesized planning examples from research papers, validated execution records against the papers and executed code, and fine-tuned and evaluated the model that carries out the analyses. Self-distillation and reinforcement learning are under consideration for the next stage. [Project notes](projects/ai-coscientist.md)
