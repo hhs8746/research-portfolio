@@ -38,9 +38,19 @@ Our submission placed **first** in the BioCreative IX MedHopQA challenge with an
 
 ## Other research
 
-- **Meerkat2 follow-up training:** I worked on rubric-based SFT, reinforcement learning, reward design, and evaluation. HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These experiments followed the original paper.
-- **FineWeb-Reasoning:** I checked reasoning-quality scoring prompts and document samples, designed rewards, and trained a base model with GRPO. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
-- **ArchEHR-QA:** I worked on a multi-agent framework for selecting evidence from electronic health records. Our system ranked first on the public leaderboard. The paper appeared at the ACL 2025 BioNLP Workshop.
+- **Meerkat2 and follow-up training:** I validated Korean medical-law QA and evaluated models on clinical benchmarks, then worked on rubric-based SFT and reinforcement learning with improved reward scoring and judge-output parsing. In follow-up experiments, HealthBench scores increased from 44.9 to 51.2 (14B) and from 46.3 to 55.3 (32B).
+- **FineWeb-Reasoning:** I checked reasoning-quality scoring prompts and document samples, designed rewards to penalize reward hacking, and trained a base model with GRPO without an initial SFT stage. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
+- **ArchEHR-QA:** I designed and tested a multi-agent framework for patient-context generation, EHR evidence selection, specialist review, and final answer synthesis. Our system ranked first on the public leaderboard. The paper appeared at the ACL 2025 BioNLP Workshop.
+- **Adaptive Latent Block Insertion:** I ran LTPO experiments and trained SoftCoT projection modules for comparison with a method that optimizes latent vectors during inference without retraining the main model. We compared the methods on five benchmarks. EMNLP 2026 Main, accepted; second author.
+
+## Other projects
+
+- **sLLM investment information retrieval:** I led the team, built a securities-report database, and designed a RAG pipeline with BM25, FAISS, query expansion, and HyDE. We combined report-derived QA for SFT with Korean preference data for DPO and won the Samsung Securities program grand prize.
+- **Parkinson's disease progression prediction:** I used protein and peptide statistics, embedding features, and NPX-based protein weighting. Kaggle silver medal.
+- **Wallpaper defect classification:** I trained EfficientNetV2 with focal loss and image augmentation for rare defect classes. Top 3% in DACON.
+- **AWS DeepRacer:** I designed reinforcement-learning rewards for staying on track and adjusting speed on straight and curved sections. Seventh place in the 2022 championship.
+
+Other competition results include a Kaggle bronze medal in Vesuvius ink detection and seventh place in a DACON genome-based variety prediction competition.
 
 ## Publications
 

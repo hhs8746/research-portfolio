@@ -38,6 +38,8 @@ EM stands for exact match.
 
 In the journal extension, I compared the contributions of retrieval, generation, and final answer selection. Some decision models strongly preferred answers they had generated themselves. With the generation model fixed, replacing the decision model increased EM from 0.84 to 0.87 under our internal evaluation setup.
 
+I also designed a routing agent that selects the reasoning effort, retrieval methods, and their order for each question. Small-scale experiments showed an improvement; full evaluation was deferred due to API cost.
+
 The workshop submission and journal experiments used different model configurations and evaluation setups. The journal score is reported separately from the official challenge result.
 
 ## Papers and task

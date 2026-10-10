@@ -10,16 +10,20 @@ This page lists my papers and the work I contributed to each project.
 
 **EMNLP 2026 Main. Accepted. Second author.**
 
+The project combines medical reasoning distillation, QA synthesized from Korean medical-law source texts, and verbosity disentanglement.
+
 - Validated synthetic QA against Korean medical law using LF-Eval and manual review.
 - Evaluated the models on three clinical benchmarks, including HealthBench.
 
-In follow-up experiments, I worked on rubric-based SFT, reinforcement learning, reward design, and evaluation. HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These are follow-up results, separate from those in the original paper.
+In follow-up experiments, I worked on rubric-based SFT, reinforcement learning, reward design, and evaluation. I changed rubric scoring to evaluate individual items and strengthened judge-output parsing to stabilize rewards. HealthBench scores increased from 44.9 to 51.2 for the 14B model and from 46.3 to 55.3 for the 32B model. These are follow-up results, separate from those in the original paper.
 
 ### Adaptive Latent Block Insertion via Online Reward Optimization
 
 **EMNLP 2026 Main. Accepted. Second author.**
 
-- Trained and evaluated the LTPO and SoftCoT comparison methods.
+The method detects sustained uncertainty during generation, inserts a latent block, and optimizes its vectors using confidence from short rollouts, without retraining the main model.
+
+- Ran LTPO experiments and trained SoftCoT projection modules on Qwen3 and Ministral.
 - Compared the methods on five benchmarks under the same experimental conditions.
 - Contributed to research on training-free optimization during inference.
 
@@ -48,7 +52,7 @@ In follow-up experiments, I worked on rubric-based SFT, reinforcement learning, 
 
 **ACL 2025 BioNLP Workshop. Co-first author.**
 
-- Worked on a multi-agent framework that selects, reviews, and combines evidence from electronic health records to answer patient questions.
+- Designed and tested a multi-agent framework with patient-context generation, initial EHR evidence selection, specialist review, and final answer synthesis.
 - Test scores: Factuality 58.6, Relevance 48.8, Overall 53.7.
 - Our system ranked first on the public leaderboard.
 
@@ -56,6 +60,6 @@ In follow-up experiments, I worked on rubric-based SFT, reinforcement learning, 
 
 ## Additional research
 
-**FineWeb-Reasoning:** Checked reasoning-quality scoring prompts and document samples across score ranges, designed GRPO rewards, and trained a base model. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
+**FineWeb-Reasoning:** Checked reasoning-quality scoring prompts and document samples across score ranges, designed rewards to penalize reward hacking, and trained a base model with GRPO without an initial SFT stage. Scores increased from 12.1 to 43.0 on GSM8K and from 14.8 to 37.2 on LogiQA.
 
 **AI-CoScientist:** Synthesized planning examples from research papers, validated and selected execution traces, and fine-tuned and evaluated an executor model. Self-distillation and reinforcement learning are being considered for the next stage. [Project notes](projects/ai-coscientist.md)
